@@ -1,0 +1,334 @@
+require_relative '_init.rb'
+
+puzzle_input = %w(rvefnvyxzbodgpnpkumawhijsc
+rvefqtyxzsddglnppumawhijsc
+rvefqtywzbodglnkkubawhijsc
+rvefqpyxzbozglnpkumawhiqsc
+rvefqtyxzbotgenpkuyawhijsc
+rvefqtyxzbodglnlkumtphijsc
+rwefqtykzbodglnpkumawhijss
+rvynqtyxzbodglnpkumawrijsc
+rvefqtyxlbodgcnpkumawhijec
+rvefqtyxzbodmlnpnumawhijsx
+rvefqtyxzbqdbdnpkumawhijsc
+rvefqtyxzlodblnpkuiawhijsc
+rvefqtyizrodelnpkumawhijsc
+rveffjyxzgodglnpkumawhijsc
+rvefqjyxzbodalnpkumadhijsc
+rvefqtidzbodglnpkumawhdjsc
+hvefqtygzbodglnpkumawhijfc
+rzefqtyxzbodglfhkumawhijsc
+rmefqtyxzbolglnpkumaehijsc
+rnefqqyxzbodglnhkumawhijsc
+rvwfqvyxzbodglnpcumawhijsc
+rvefqtyxzbokgltpkumavhijsc
+rvefciyxzbodglnmkumawhijsc
+rvefptyxzbodglnpkuhashijsc
+rvefqtyxzrodglnpkxmawhiqsc
+rvefqtyxzbotglnpkumawriwsc
+rvufqtyxzbodglnplumawhijvc
+rvefutykzbodglnpkumaahijsc
+rvefqtyxqbodgllprumawhijsc
+rvegqttxzbodgllpkumawhijsc
+dvefqtyxzsodglnpkumawdijsc
+rvefqtyxkbodglnfkumawhijsj
+rvefqtyxzbodnlnpcumawhijnc
+rvefqtyxzbodglfpkuocwhijsc
+rvecqtyxzbbdganpkumawhijsc
+rvefytyxzbodglnpkubgwhijsc
+rvefxtyazbomglnpkumawhijsc
+rvefqgyxzbodglnpkumawyiksc
+avefqtyxzbodglnfkummwhijsc
+fvefqtyxzbbdglnpkumswhijsc
+rvefqtyxzxodglnpkumuuhijsc
+rvezqtyxzbydclnpkumawhijsc
+rvefqtyxzbohglnpkumawdijjc
+rvejqtyxzbodrlnpkumawhijsd
+rvefitzxzbxdglnpkumawhijsc
+rvefutyxzbvdglnikumawhijsc
+rvefqtyazbodgqnbkumawhijsc
+rvefqtyxzbolglnpkwmajhijsc
+rvefqtyxzjodglnpgwmawhijsc
+rvefhtyxzbodglbpaumawhijsc
+mvexqtyxzbodglnpkumawrijsc
+rvefqtyxwbodglnpkumawhbxsc
+rvefqtyxzbodgsnpkudawsijsc
+rvwfqtyxzbonglnwkumawhijsc
+rvefqtyxzjodglnpkfmawhwjsc
+rvefqtyxzbodglntkumughijsc
+rvefctyxzbodglnpkumawhiwsx
+avefqtyvzbodglnpkumawhijsb
+rfefqtyxzlodglnphumawhijsc
+rvefqtyxzfowglnpkumaehijsc
+rvhfvtyxzbodgqnpkumawhijsc
+rfefqtyxzbodglapkumuwhijsc
+rvefqclxzbodglnzkumawhijsc
+qvefqtyxzbodglnckumcwhijsc
+rvefqtyxzkodglnpkymawgijsc
+rvefqtyxzbodgfnpkumafhizsc
+rvefqtyxzbodglnxkumavhijsf
+rvevqtyxzbodgpnpkurawhijsc
+rvefqtyxziodglnpkubawhijss
+rrefqtpxzyodglnpkumawhijsc
+rvefqfyxzbodglcpkxmawhijsc
+rvefdtyxzbodglnpkumvwhijsn
+rverqtyxzbodglnpkwmawhijuc
+rvecjtyxzboxglnpkumawhijsc
+rvefqtyxzbodglnpkqmaxhifsc
+rtnfqtyxzbodglnpkumawhijmc
+lvefqtyxzbodelnpkumawhijsz
+dvefqtyxzbbdgvnpkumawhijsc
+rvefqlyhzbodglnpkumtwhijsc
+roefqtyxlbodglnpkumawhyjsc
+rvefqsydzjodglnpkumawhijsc
+rveybtyxzbodglnpkumawhijsn
+rvefqtyhzbodgvnpmumawhijsc
+rvefqxyazboddlnpkumawhijsc
+vvefqtyxzbohglqpkumawhijsc
+reefhtyxzbodglnpkkmawhijsc
+rvefqtyxzbodglnpkulowhijrc
+rveqqtyxzbodgknpkumawhijsk
+jvefqtqxzbodglnpkumawiijsc
+rvefqtyxzboxglnpvuqawhijsc
+rvefquyxzbodglwwkumawhijsc
+rvefqtyxzbodnlnpkumawhgjbc
+rvdfqthxdbodglnpkumawhijsc
+rvefqtyxzbodllnpkumawhujsb
+evefqtyxzboyglnpkumowhijsc
+rvefktyxzbomglnpzumawhijsc
+rvefqtyxzbodhlnnkrmawhijsc
+rvefqtyxrbodglnpkujaehijsc
+rvefqtyzzbodglnpkumrwhijsb
+evefqtyxzpodglfpkumawhijsc
+rvefqtyxibodglkpyumawhijsc
+rrefqtyxzbodglnpkudawhajsc
+rvifqtyxzbodglxpkumawhijlc
+rxefqtyxzbedglnpkumawhijsp
+rvnfqtyxzbopglnpkuqawhijsc
+rvefqtyxkbodglnpoumawoijsc
+dvefwtyxzbodglnpksmawhijsc
+rvkfqtyxzbodglnpkdmawhijsa
+rcefytyxzzodglnpkumawhijsc
+rvefqtkxzbodglnpktqawhijsc
+nvezqhyxzbodglnpkumawhijsc
+rrefqtyxzbodgunpkumpwhijsc
+rvefqtaxzbodgknpkumawhijic
+pvefqtyxzbodglnpkuxawsijsc
+rvefqtyxzbodglkpvumawhjjsc
+wvefqtyxzkodglnpkumawhhjsc
+rzefqtyxzbotglnpkumawhxjsc
+rvefqtxpzbodglnpkumawzijsc
+bgefqtyxzbodglnpkrmawhijsc
+rvefqlyxzbodglnpkumilhijsc
+cbefqtyxzbodglnpkumawhiesc
+rvefqtyxzbydelnpkumahhijsc
+rvefntyxzbodglnpkumaehijsw
+rverqtyxztodglopkumawhijsc
+rvefqtyxzdodgwrpkumawhijsc
+rvefqtyxibodglnikumawhtjsc
+qvafqtyxzbodglnpkurawhijsc
+rvefqtyxwbodglnpaumawoijsc
+rvefqtyxzoodglndknmawhijsc
+rvdfqtlxzyodglnpkumawhijsc
+rvefqtyxzbodglngfumawhinsc
+rsefqtyxzbodglnpkumawhijek
+rvoestyxzbodglnpkumawhijsc
+svefqtyxzboaglnprumawhijsc
+rvefqtybzbodgwnpkumawwijsc
+rvefqtyxzdwdglnpkvmawhijsc
+rvlfqtyxzbodglnpkrmawhixsc
+rvefqtyxwbodglepkumawhijsd
+rvefqtbxzbodglnqkumawhijmc
+rvefqtzxzbodglnpkumuzhijsc
+rvefqtyxzbodglnpkumawzwnsc
+rvwfqtyxzboiglnpkumawhijsg
+rtehotyxzbodglnpkudawhijsc
+rvegqtyxzbodglnpyumawhijsl
+rvecqtyxzbsdglnpkumawhojsc
+rvefqtyxzbodmlnpkumaghijfc
+rvefqtyxzxodglnpkumanvijsc
+rvefqtyxzbodglnbiugawhijsc
+lvefqtlxzbodglnplumawhijsc
+rvefqtyxvbodglnpkumaldijsc
+rmefqtyxzbodgvnpkuuawhijsc
+rvefqtyxzbodglnpkymeuhijsc
+rvefqtyxzuodganpsumawhijsc
+rxefqtyxzbodglnpkumgwhijwc
+rvefgtyxzbodglnpkudawxijsc
+ahefqtyxzbodglnpkumawhejsc
+rfefqtyxzbzdglnpkusawhijsc
+rvefqtyszqodgljpkumawhijsc
+rvefqtylzboiglnpkumrwhijsc
+rvefqtyxzltdglnpkumawhijsu
+rbefqtyxzbodglnpqumawhijsi
+rvefqtyozpodglnpkumawhijsa
+zvefqtyxzpopglnpkumawhijsc
+rvefqtyxzbodglnfkqmawhijsp
+rvefqtyxzbodgliakumawhijsf
+rvefqtymzrodgfnpkumawhijsc
+ivejqtyxzbodglnpkumawhijuc
+rvefqtyxzbodflnpkxwawhijsc
+dvrfqtyxzbodglnpkumashijsc
+rqefqtyxzbwdglnpkumawvijsc
+tvefqtkxzbodgltpkumawhijsc
+rvefdtyxzbodguxpkumawhijsc
+rveqqtyxvbodglnykumawhijsc
+rvefqtypzcovglnpkumawhijsc
+rvefqnyxzbosglnpkumdwhijsc
+rvefstjxzbodslnpkumawhijsc
+rvefqzyxzpodglnpkummwhijsc
+rvefqkyxzbodglnhgumawhijsc
+rvufqvyxzbodklnpkumawhijsc
+rvefotyxzhodglnpkumawhijsk
+rvefqtyxzbokglnpkumawvcjsc
+lvefqtyxzbolglnpkumawoijsc
+rvefqtywzoodglfpkumawhijsc
+rvehqtqxzbodglnpkumawhcjsc
+rqefqtyxzbodolnpkumjwhijsc
+rvefqtyxzbodglrpkunawgijsc
+rvefqtyxzbodglamkumawdijsc
+rvefvtyzzbodllnpkumawhijsc
+rvefqtyxzbldglnpfcmawhijsc
+rvefppyxzbodglnpkucawhijsc
+rvefquyuzbodglnpkumkwhijsc
+rvefqtyxzbodgqxpkumawhivsc
+rtefotyxzbodglnpkudawhijsc
+rvefqtyxzbodgbnmkuzawhijsc
+ivefqtyxzbodgsnpkumzwhijsc
+rvhfqtyxzbodolnpkumawhijsz
+rvefvtyxzbodwlnpkusawhijsc
+riemqtyxzbodglnpkumawhiasc
+rvtfqtyxzbqdglnpkumawuijsc
+raesqtyxzbodglnpkumawhijsj
+rvefqtyxzbodalmpkumawhihsc
+rvefqtlxzbodgznpkkmawhijsc
+rvefqbyxzbodglgpkubawhijsc
+rvefqtyxnbodgxnpkumswhijsc
+rvefqtyxzkodvlnukumawhijsc
+rvefqtyzzbocglnpkumafhijsc
+rvhfqtyxzbodglmpkumgwhijsc
+rvsfrtyxzbodnlnpkumawhijsc
+rvefqtyxzbxdglnpkujcwhijsc
+rvefqtyvzrodglnphumawhijsc
+reetatyxzbodglnpkumawhijsc
+rvefqtyxzbodglnpzumaoqijsc
+ovefqtyyzbodglnvkumawhijsc
+rvefqbyxzbodnlnpkumawhijsi
+xvefqtyxzbodgrnpkumawrijsc
+rvebqtyxzbodglnpkumazhiasc
+rqeretyxzbodglnpkumawhijsc
+rvefqtyxzyodglapkumvwhijsc
+rvesqxyxzbodglnpvumawhijsc
+rvefqtyxeborglnpkufawhijsc
+rvecqtyxzbodflnpkumawnijsc
+rvefdpyxtbodglnpkumawhijsc
+rvefqtyfzbodclnpkymawhijsc
+rvefqtywzbodglnpxumawhiusc
+rvefqtyxzbodglnpkumawzbjwc
+rvewqtyxdbodglnpxumawhijsc
+rvefqtyxzgocglnpkgmawhijsc
+rvufqtyxzbodggnpkuzawhijsc
+rvefqtynzlodgllpkumawhijsc
+rvedqtyxzbodghnpkumawhujsc
+rvefqtyxlbodgnnpkpmawhijsc
+rvefqtyxzboqglnpkzmawhijec
+rvefqtyxzbodglnpkfmwwyijsc
+rwefqtkxzbodzlnpkumawhijsc
+rvefqtyxvbodglnpkufawhyjsc
+rvefqtyxzbodgltpkumawhqmsc
+rvefctyxzbodglfpkumathijsc
+rvefqtyxzbodgfnpkuuawhijfc
+rvefqttxzbodglnpmumawhijwc
+rvefqtyxzbodglnpkqmawhihsj
+rvefqtyxzbsdglcnkumawhijsc
+rvbiqtyxzbodglnpkumawhijlc
+rnefqtylzvodglnpkumawhijsc
+mvefqtyxzbddglnpkumcwhijsc
+rvefwtyxzbodglnpkgmawhijxc
+rvefqtyxljodglnpkumxwhijsc
+rvefqtyxzbodglnpkuprwhijsd
+rcxfqtyxzbldglnpkumawhijsc
+rvetqtyxzbojglnpkumewhijsc
+rvxfqtyxzbtdglnpkbmawhijsc)
+
+parsed_input = puzzle_input.map{ |x| x.split('') }
+
+#PART 1
+test_data = %w(abcdef
+bababc
+abbcde
+abcccd
+aabcdd
+abcdee
+ababab).map{ |x| x.split('') }
+
+def process(input_data)
+  doubles = 0
+  triples = 0
+
+  input_data.each do |datum|
+    seen_letters = {}
+    double = false
+    triple = false
+    datum.each do | letter |
+      seen_letters[letter] ||= 0
+      seen_letters[letter] += 1
+    end
+
+    seen_letters.each do |_, count|
+      if count == 2
+        double = true
+      elsif count == 3
+        triple = true
+      end
+    end
+
+    doubles += 1 if double
+    triples += 1 if triple
+  end
+
+  doubles * triples
+end
+
+def test(test_data)
+  result = process(test_data)
+  raise "Result wrong, got #{result} instead of 12" unless result == 12
+end
+
+
+#PART 2
+test_data_2 = %w(abcde
+fghij
+klmno
+pqrst
+fguij
+axcye
+wvxyz).map{ |x| x.split('') }
+
+def process_2(input_data)
+  input_data.each do |datum|
+    input_data.each do |check|
+      delta = 0
+      delta_index = -1
+
+      datum.each_with_index do |letter, index|
+        unless check[index] == letter
+          delta += 1
+          delta_index = index
+        end
+      end
+
+      if delta == 1
+        datum.delete_at(delta_index)
+        return datum.join
+      end
+    end
+  end
+end
+
+def test_2(test_data)
+  result = process_2(test_data)
+  raise "Result wrong, got #{result} instead of 'fgij'" unless result == 'fgij'
+end
+
+binding.pry
