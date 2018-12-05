@@ -1,4 +1,6 @@
 require_relative '_init.rb'
+require 'benchmark'
+require 'set'
 
 puzzle_input = File.read('day1_input.txt').split("\n")
 parsed_input = puzzle_input.map{ |x| x.to_i }
@@ -50,14 +52,44 @@ def process_2_2(input_data)
   total = 0
   index = 0
   max = input_data.count - 1
+  loops = 0
 
-  while true do
-    total += input_data[index]
-    return total if seen_totals.include?(total)
-    seen_totals << total
-    index += 1
-    index = 0 if index > max
-  end
+  #Benchmark.bm do |y|
+    while true do
+      #y.report("Interation: #{loops}") {
+        total += input_data[index]
+        return total if seen_totals.include?(total)
+        seen_totals << total
+        index += 1
+        index = 0 if index > max
+        loops += 1
+      #}
+    end
+  #end
+
+end
+
+# ~0.041111 seconds :lol:
+def process_2_3(input_data)
+  seen_totals = [0].to_set
+  total = 0
+  index = 0
+  max = input_data.count - 1
+  loops = 0
+
+  #Benchmark.bm do |y|
+    while true do
+      #y.report("Interation: #{loops}") {
+        total += input_data[index]
+        return total if seen_totals.include?(total)
+        seen_totals << total
+        index += 1
+        index = 0 if index > max
+        loops += 1
+      #}
+    end
+  #end
+
 end
 
 def test_2(test_data)
@@ -86,11 +118,10 @@ p 'Answer for Part 1:'
 p process(parsed_input)
 p ''
 p 'Answer for Part 2:'
-p process_2_2(parsed_input2)
+p process_2_3(parsed_input2)
 
-#require 'benchmark'
-#
 #Benchmark.bm do |x|
-#  x.report { p process_2(puzzle_input.map{ |x| x.to_i }) }
-#  x.report { p process_2_2(puzzle_input.map{ |x| x.to_i }) }
+  #x.report { p process_2(puzzle_input.map{ |x| x.to_i }) }
+  #x.report { p process_2_2(puzzle_input.map{ |x| x.to_i }) }
+  #x.report { p process_2_3(puzzle_input.map{ |x| x.to_i }) }
 #end
