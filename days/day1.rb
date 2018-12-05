@@ -1,5 +1,4 @@
 require_relative '_init.rb'
-require 'benchmark'
 require 'set'
 
 puzzle_input = File.read('day1_input.txt').split("\n")
