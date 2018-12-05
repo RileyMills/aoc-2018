@@ -1,6 +1,6 @@
 require_relative '_init.rb'
 
-input_data = File.read('day4_input.txt').split("\n")
+puzzle_input = File.read('day4_input.txt').split("\n")
 
 WAKES_UP = 'wakes up'.freeze
 FALLS_ASLEEP = 'falls asleep'.freeze
@@ -18,7 +18,7 @@ def parse_by_datetime(input)
   parsed_dates.sort
 end
 
-parsed_by_datetime = parse_by_datetime(input_data)
+parsed_by_datetime = parse_by_datetime(puzzle_input)
 
 def prefill_day_hash
   day = {}
