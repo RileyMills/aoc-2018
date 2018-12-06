@@ -174,7 +174,7 @@ res = process(puzzle_input)
 
 p "PART 1 ANSWER:"
 p res[:largest_area]
-p "It's actually"
+p "Just kidding, it's actually"
 p ["AY", 3660]
 
 
@@ -236,5 +236,3 @@ end
 p "PART 2:"
 res_2 = process_2(puzzle_input)
 p res_2[:safe_area]
-
-binding.pry
