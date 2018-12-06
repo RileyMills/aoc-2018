@@ -1,5 +1,4 @@
 require_relative '_init.rb'
-require 'set'
 
 puzzle_input = File.read('day1_input.txt').split("\n")
 parsed_input = puzzle_input.map{ |x| x.to_i }
