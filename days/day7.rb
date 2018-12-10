@@ -427,7 +427,5 @@ test_2
 InstructionStep.reset!
 runner = step_2
 p "PART 2 ANSWER:"
-# 214 is too low
 p runner.second
 
-binding.pry
